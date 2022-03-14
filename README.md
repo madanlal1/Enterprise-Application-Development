@@ -2,7 +2,7 @@
 
 ## Git
 
-Git clone <url>		//clone of existing repository from github	
+Git clone [<url>]		//clone of existing repository from github	
   
 // --------------------------------------------------------------------------
   
