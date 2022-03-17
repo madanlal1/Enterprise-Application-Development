@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Promises</title>
+
+    <script>
+
+        // ---------------------- Basic Promise step
+
+            // let promise = true;
+
+            // let prom = new Promise((resolve, reject) => {
+                
+            //     if(promise) {
+            //         resolve("Promise Fulfilled");
+            //     } else {
+            //         reject("Promise Not Fulfilled");
+            //     }
+            // })
+
+            // console.log(prom);  
+
+
+        // ---------------------- Advance Promise step
+
+                let Prom = (complete) => {
+
+                    return new Promise((resolve, reject) => {
+    
+                        if(complete) {
+                            
+                            resolve("Promise fulfilled successfully");
+                        }
+                        else {
+                            reject("Promise not fulfilled");
+                        }
+
+                    })
+
+                }
+
+                Prom(true).then((result)=>{console.log(result)}).catch((error)=> {console.log(error)});
+        
+                
+        // ----------------------- Get Data From JSON API (JSON Placeholder)
+
+                // let Prom = () => {
+                //     return new Promise((resolve, reject) => {
+                //         $.get("https://jsonplaceholder.typicode.com/users", (data) => {
+
+                //             resolve(data);
+                //         }).fail(() => {
+
+                //             reject("Failed to load Data From Server!!!");
+                //         })
+                //     })
+                // }
+
+                
+                // Prom().then((result)=>{
+                    
+                //         console.log(result)
+                //     }).catch((error)=>{
+                        
+                //         console.log(error)
+                //     });
+                    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
