@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import Categories from './components/Categories';
 import Kids from './components/Kids';
 import Mother from './components/Mother';
+import Product from './components/Product';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<AboutUS/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/product/:id" element={<Product/>} />
+        <Route path="/products" element={<Product/>} />
         <Route path="/categories" element={<Categories/>}>
           {/* <Route index element={<Kids/>}/> */}
           <Route path='kids' element={<Kids/>}/>

@@ -14,3 +14,6 @@ li{
     text-decoration: none;
     font-weight: bold;
 }
+.active {
+    color: red;
+}
