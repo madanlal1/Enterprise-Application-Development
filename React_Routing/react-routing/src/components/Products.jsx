@@ -1,15 +1,28 @@
-import React from 'react';
-import { useParams } from "react-router-dom";
-
-const Product = () => {
-
-    const {id} = useParams();
-    const list =  [1,2,3,4,5];
-
-    return (
-        <>
-            {/* list.forEach(itm => {<h1>Product Detail+{itm}</h1>})  */}
-        </>
-    );
-}
-export default Product;
+const Products = [
+    {
+        id:1,
+        name:"Laptop",
+        Price:32000
+    },
+    {
+        id:2,
+        name:"PC",
+        Price:50000
+    },
+    {
+        id:3,
+        name:"Mouse",
+        Price:850
+    },
+    {
+        id:4,
+        name:"Keyboard",
+        Price:450
+    },
+    {
+        id:5,
+        name:"LCD",
+        Price:12000
+    }
+]
+export default Products;
