@@ -9,6 +9,7 @@ import Kids from './components/Kids';
 import Mother from './components/Mother';
 import Product from './components/Product';
 import SignUp from './components/SignUp';
+import NewComponent from './components/HigherOrderFunction/CenteredHOC';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<AboutUS/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/hoc" element={<NewComponent/>} />
         <Route path="/product" element={<Product/>} />
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/products" element={<Product/>} />
