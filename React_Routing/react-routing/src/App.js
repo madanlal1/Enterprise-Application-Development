@@ -11,6 +11,7 @@ import Product from './components/Product';
 import SignUp from './components/SignUp';
 import NewComponent from './components/HigherOrderFunction/CenteredHOC';
 import StopWatch from './components/StopWatch';
+import Formik_Yup from './components/Formik_Yup';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/hoc" element={<NewComponent/>} />
         <Route path="/stopwatch" element={<StopWatch/>} />
+        <Route path="/formik" element={<Formik_Yup/>} />
         <Route path="/product" element={<Product/>} />
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/products" element={<Product/>} />

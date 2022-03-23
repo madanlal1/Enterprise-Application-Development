@@ -6,10 +6,10 @@ const StopWatch = () => {
 
     return (
         <>
-        <h1>{time}</h1>
+        {/* <h1>{time}</h1>
         <button onClick={setInterval(() => setTime(time+1),1000)}>Start Timer</button>
         <button onClick={clearInterval(setTime)}>Stop Timer</button>
-        <button onClick={setTime(0)}>Reset</button>
+        <button onClick={setTime(0)}>Reset</button> */}
         </>
     )
 }

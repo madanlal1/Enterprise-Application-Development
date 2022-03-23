@@ -10,7 +10,7 @@ const HoverCounter = (props) => {
 
     return (
         <>
-            <h1 onMouseOver={increment}>You clicked {count} times</h1>
+            <h1 onMouseOver={increment}>You Hovered {count} times</h1>
         </>
     )
 }
