@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Bind Method</title>
+    <script>
+
+
+        // const myObject = {
+        //     name:"Madan",
+        //     skill:"Programming",
+        //     feature : function(){
+        //         console.log(`My name is ${this.name}. My skill is ${this.skill}.`);
+        //     }
+        // }
+
+        // myObject.feature();                         // direct call
+
+        // let newFunction = myObject.feature;
+        // newFunction();                              // will not display other keys value...
+
+        // using bind method
+        // let newFunction2 = myObject.feature.bind(myObject);
+        // newFunction2();
+
+
+        // ---------------------------------------------------------------------------
+
+
+        const newObject = {
+            name:"LS Madan",
+            skill:"Developer"
+        }
+        
+        function myFunction() {
+
+            console.log(`My name is ${this.name}. My skill is ${this.skill}.`)
+        }
+        
+
+        let newFunction3 = myFunction.bind(newObject);
+        newFunction3();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

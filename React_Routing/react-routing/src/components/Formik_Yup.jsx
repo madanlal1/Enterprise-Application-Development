@@ -22,6 +22,8 @@ const Formik_Yup = () => {
                 }
                 if(!values.email) {
                     errors.email = 'Email is required'
+                } else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/){
+                    errors.email = 'Invalid Email'
                 }
         
                 return errors;
@@ -40,13 +42,13 @@ const Formik_Yup = () => {
             <form onSubmit={formik.handleSubmit}>
 
                 <input type="text" name="fname" value={formik.values.fname} placeholder="Firstname" onChange={formik.handleChange}/> 
-                <span style={{color: 'red'}}>{formik.errors.fname}</span>
+                <span style={{color: 'red'}}>{formik.touched.fname && formik.errors.fname}</span>
                 <br/>
                 <input type="text" name="lname" value={formik.values.lname} placeholder="Lastname" onChange={formik.handleChange}/>  
-                <span style={{color: 'red'}}>{formik.errors.lname}</span>
+                <span style={{color: 'red'}}>{formik.touched.lname && formik.errors.lname}</span>
                 <br/>
                 <input type="email" name="email" value={formik.values.email} placeholder="Email" onChange={formik.handleChange}/>  
-                <span style={{color: 'red'}}>{formik.errors.email}</span>
+                <span style={{color: 'red'}}>{formik.touched.email && formik.errors.email}</span>
                 <br/>
 
                 <button type="submit" >Submit</button> 
