@@ -1,33 +1,47 @@
 import { useFormik } from "formik";
+import * as Yup from 'yup';
 
 const Formik_Yup = () => {
 
     const formik = useFormik(
         {
-            initialValues : { fname: "", lname:"", email:"" },
+            initialValues : { fname: "", lname:"", email:"", gender:""},
 
             onSubmit : (values) => {
 
                 console.log("Form Submitted", values);
             },
-            validate : values => {
+            // validate : values => {
 
-                let errors = {}
+            //     let errors = {}
 
-                if(!values.fname) {
-                    errors.fname = 'Firstname is required'
-                }
-                if(!values.lname) {
-                    errors.lname = 'Lastname is required'
-                }
-                if(!values.email) {
-                    errors.email = 'Email is required'
-                } else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/){
-                    errors.email = 'Invalid Email'
-                }
+            //     if(!values.fname) {
+            //         errors.fname = 'Firstname is required'
+            //     }
+            //     if(!values.lname) {
+            //         errors.lname = 'Lastname is required'
+            //     }
+            //     if(!values.email) {
+            //         errors.email = 'Email is required'
+            //     } else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/){
+            //         errors.email = 'Invalid Email'
+            //     }
         
-                return errors;
-            }
+            //     return errors;
+            // }
+            validationSchema:Yup.object({
+                fname:Yup.string()
+                            .max(30,"Firstname should not exceed 10 characters.")
+                            .required("Firstname is required"),
+                lname:Yup.string()
+                            .max(30,"Lastname should not exceed 10 characters.")
+                            .required("Lastname is required"),
+                email:Yup.string()
+                            .max(30, "Email should not exceed 15 characters")
+                            .required("Email is required"),
+                gender:Yup.string()
+                            .required(" select gender")
+            })
 
         }
     )
@@ -51,6 +65,12 @@ const Formik_Yup = () => {
                 <span style={{color: 'red'}}>{formik.touched.email && formik.errors.email}</span>
                 <br/>
 
+                <input type="radio" name="gender" value="male" onChange={formik.handleChange}/>
+                <label>male</label>
+                <input type="radio" name="gender" value="female" onChange={formik.handleChange}/>
+                <label>female</label>
+                <span style={{color: 'red'}}>{formik.touched.gender && formik.errors.gender}</span>
+                <br />
                 <button type="submit" >Submit</button> 
 
             </form>
