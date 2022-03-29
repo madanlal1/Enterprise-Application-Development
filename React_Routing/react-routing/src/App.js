@@ -12,7 +12,7 @@ import SignUp from './components/SignUp';
 import NewComponent from './components/HigherOrderFunction/CenteredHOC';
 import StopWatch from './components/StopWatch';
 import Formik_Yup from './components/Formik_Yup';
-
+import Wrapper from './components/HOC_Classbased/Wrapper';
 function App() {
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
         <Route path="/about" element={<AboutUS/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/hoc" element={<NewComponent/>} />
+        <Route path="/wrapper" element={<Wrapper/>} />
         <Route path="/stopwatch" element={<StopWatch/>} />
         <Route path="/formik" element={<Formik_Yup/>} />
         <Route path="/product" element={<Product/>} />

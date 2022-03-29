@@ -5,7 +5,7 @@ const Formik_Yup = () => {
 
     const formik = useFormik(
         {
-            initialValues : { fname: "", lname:"", email:"", gender:""},
+            initialValues : { firstname: "", lastname:"", email:"", gender:""},
 
             onSubmit : (values) => {
 

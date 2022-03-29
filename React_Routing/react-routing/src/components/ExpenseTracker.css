@@ -1,0 +1,24 @@
+.box {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    background-color: gray;
+    box-shadow: 0px 0px 5px black;
+}
+h1 {
+    text-align: center;
+    margin-top: -10px;
+    color:white;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px;
+}
+li {
+    list-style: none;
+}
