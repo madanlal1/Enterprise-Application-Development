@@ -31,13 +31,13 @@ const Formik_Yup = () => {
             // }
             validationSchema:Yup.object({
                 fname:Yup.string()
-                            .max(30,"Firstname should not exceed 10 characters.")
+                            .max(30,"Firstname should not exceed 30 characters.")
                             .required("Firstname is required"),
                 lname:Yup.string()
-                            .max(30,"Lastname should not exceed 10 characters.")
+                            .max(30,"Lastname should not exceed 30 characters.")
                             .required("Lastname is required"),
                 email:Yup.string()
-                            .max(30, "Email should not exceed 15 characters")
+                            .max(30, "Email should not exceed 30 characters")
                             .required("Email is required"),
                 gender:Yup.string()
                             .required(" select gender")

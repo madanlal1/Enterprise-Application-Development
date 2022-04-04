@@ -3,10 +3,6 @@ import HOC from './HOC';
 
 class OnClick extends React.Component{
 
-    constructor(props)
-    {  
-         super(props)
-    }
     render(){
         return (
             <div style={{display:'grid', justifyContent:'center', textAlign:'center'}}>

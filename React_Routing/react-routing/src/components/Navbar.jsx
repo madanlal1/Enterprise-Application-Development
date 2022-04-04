@@ -15,6 +15,9 @@ const Navbar = () => {
         <li><NavLink activeClassName="active" to="/wrapper">HOC2</NavLink></li>
         <li><NavLink activeClassName="active" to="/stopwatch">Stop Watch</NavLink></li>
         <li><NavLink activeClassName="active" to="/formik">Formik</NavLink></li>
+        <li><NavLink activeClassName="active" to="/componentabcd">Component-ABCD</NavLink></li>
+        <li><NavLink activeClassName="active" to="/practice">Practice</NavLink></li>
+        <li><NavLink activeClassName="active" to="/parentcomponent">Render_Props</NavLink></li>
       </ul>
     </>
   );

@@ -13,6 +13,9 @@ import NewComponent from './components/HigherOrderFunction/CenteredHOC';
 import StopWatch from './components/StopWatch';
 import Formik_Yup from './components/Formik_Yup';
 import Wrapper from './components/HOC_Classbased/Wrapper';
+import Components_ABCD from './components/Components_ABCD';
+import Practice from './components/Practice'
+import ParentComponent from './components/RenderProps/ParentComponent';
 function App() {
   return (
     <>
@@ -29,11 +32,14 @@ function App() {
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/products" element={<Product/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/parentcomponent" element={<ParentComponent/>} />
+        <Route path="/componentabcd" element={<Components_ABCD/>} />
         <Route path="/categories" element={<Categories/>}>
           {/* <Route index element={<Kids/>}/> */}
           <Route path='kids' element={<Kids/>}/>
           <Route path='mother' element={<Mother/>}/>
         </Route>
+        <Route path="/practice" element={<Practice name="Madan"/>}/>
       </Routes>
     </>
   );
