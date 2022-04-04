@@ -39,7 +39,7 @@ function App() {
           <Route path='kids' element={<Kids/>}/>
           <Route path='mother' element={<Mother/>}/>
         </Route>
-        <Route path="/practice" element={<Practice name="Madan"/>}/>
+        <Route path="/practice" element={<Practice name={() => "Madan"} />}/>
       </Routes>
     </>
   );

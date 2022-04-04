@@ -12,10 +12,9 @@ const HOC = (OriginalComponent) =>
                 count:0
             }
 
-            this.hoverHandle = this.hoverHandle.bind(this);
         }
         
-        hoverHandle () {
+        hoverHandle = () => {
             this.setState(prestate => {
                 return {count:prestate.count+1};
             })
