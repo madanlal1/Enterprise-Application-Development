@@ -1,8 +1,8 @@
-import store from './store/Store';
+import store from './components/store/Store';
 import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
+import Counter from './components/Counter';
 
 ReactDOM.render(
     <Provider store={store}>
