@@ -1,0 +1,44 @@
+body {
+    background-color: gray;
+    height: 100rem;
+}
+.box {
+    width: 10rem;
+    height: 10rem;
+    margin: 10px;
+}
+.blueBox {
+    background-color: blue;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.greenBox {
+    background-color: green;
+    
+    /* position: fixed;
+    top: 200px;
+    left: 200px; */
+
+    /* float: left; */
+
+    margin: 0 auto;             /*box at center of the page*/
+}
+.yellowBox {
+    background-color: yellow;
+    float: left;
+}
+h1 {
+    color: white;
+    clear: left;        /*h1 on new line (clear:both for left+right)*/
+}
+p {
+    color: white;
+}
+.container {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    position: relative;
+    top: 350px;
+}
