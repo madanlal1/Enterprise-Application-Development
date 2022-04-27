@@ -32,30 +32,42 @@
 
 // Express Server
 
-const express = require('express');
+// const express = require('express');
 
-const path = require('path');
+// const path = require('path');
 
-const app = express();
+// const app = express();
 
-app.use('/',express.static('public/'));
+// app.use('/',express.static('public/'));
 
-app.get('/', function(req,res) {
+// app.get('/', function(req,res) {
 
-    res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
-    // res.status(200).json({result:'success'})
-})
+//     res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
+//     // res.status(200).json({result:'success'})
+// })
 
-app.get('/about', function(req,res) {
+// app.get('/about', function(req,res) {
 
-    res.sendFile(path.resolve(__dirname, './public/components/About.html'));
-})
+//     res.sendFile(path.resolve(__dirname, './public/components/About.html'));
+// })
 
-app.get('*', function(req,res) {
+// app.get('*', function(req,res) {
 
-    res.status(404).json({msg:'Page Not Found!'})
-})
+//     res.status(404).json({msg:'Page Not Found!'})
+// })
 
-app.listen(3000, function() {
-    console.log('server is listening at port 3000')
-})
+// app.listen(3000, function() {
+//     console.log('server is listening at port 3000')
+// })
+
+
+// OS Module
+
+const os = require('os');
+
+console.log("OS Platform: ",os.platform());
+console.log("OS CPU Architecture: ",os.arch());
+console.log("Number of Logical CPUs Cores: ",os.cpus());
+console.log("Host Name: ",os.hostname());
+console.log("Home Directory: ",os.homedir());
+console.log("Current Version: ",os.version());
