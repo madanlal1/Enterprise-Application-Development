@@ -1,4 +1,5 @@
 const express = require('express');
+const pug = require('pug');
 
 const server = express();
 
@@ -17,7 +18,7 @@ server.get('/about', (req,res)=> {
 })
 
 server.get('/blog', (req,res)=> {
-    res.render('blog');
+    res.pug.render('blog')
 })
 
 server.listen(3000, () => {
