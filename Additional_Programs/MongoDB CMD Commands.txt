@@ -1,0 +1,29 @@
+show db / show databases	// for showing list of databases
+use dbname			// for using or creating new database
+
+db.createCollection("product")	// for creating collection/tables
+show collections		// display collections
+
+db.product.insertOne({name:'madan', designation:'student'})	// insert one document in collection
+db.product.insertMany([{name:'safdar', designation:'student'},{name:'ali', designation:'student'}])	// insert multiple documents in collection
+
+db.product.find()		// for find all
+db.product.find().pretty	// find all and display in order
+
+const data = db.product.find()	// store data in data variable
+data.next()			// display one by one
+
+db.product.findOne()
+db.product.findOne({name:'madan'})	// find one particular document
+db.product.findOne({name:'madan',designation:'student'})	// find one particular document
+
+db.product.distinct('name')		// return distinct names
+db.product.find({age : {$gt:18}})	// find by applying filter
+
+// if two records having same data filter then first one will return
+
+db.product.update({name:'madan'},{name:'Madan'})	// update data
+db.product.update({name:'Madan'},{$set : {name:'madan'}})	// update data (same as above)
+
+db.product.drop()	// delete collection
+db.drop()		// delete database
