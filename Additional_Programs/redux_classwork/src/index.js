@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import Counter from './components/Counter';
 
 ReactDOM.render(
+
     <Provider store={store}>
         <Counter/>
     </Provider>, document.getElementById('root')

@@ -1,9 +1,10 @@
-import MenuAppBar from "./components/Navbar";
+// import MenuAppBar from "./components/Navbar";
 
 function App() {
   return (
    <>
-     <MenuAppBar />
+     {/* <MenuAppBar /> */}
+     <h1>hellow world</h1>
    </>
   );
 }
