@@ -18,6 +18,7 @@ const Navbar = () => {
         <li><NavLink activeClassName="active" to="/componentabcd">Component-ABCD</NavLink></li>
         <li><NavLink activeClassName="active" to="/practice">Practice</NavLink></li>
         <li><NavLink activeClassName="active" to="/parentcomponent">Render_Props</NavLink></li>
+        <li><NavLink activeClassName="active" to="/contextAPI">Context API</NavLink></li>
       </ul>
     </>
   );

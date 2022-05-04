@@ -22,6 +22,7 @@ function Counter(props) {
             <div className={`${day ? 'dayLight' : 'nightLight'}`}> 
             <h1>Counter</h1>
             <h2>Mode : Good {morning ? "Day" : "Night"} </h2>
+            
             <button onClick={increment}>Increment</button>
             <label>Counter : {props.count}</label>
             <button onClick={decrement}>Decrement</button> <br/><br/>

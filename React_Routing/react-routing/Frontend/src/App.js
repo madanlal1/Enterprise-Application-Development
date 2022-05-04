@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AboutUS from './components/AboutUS';
 import Contact from './components/Contact';
 import Categories from './components/Categories';
+import ContextAPI from './components/ContextAPI/ContextAPI';
 import Kids from './components/Kids';
 import Mother from './components/Mother';
 import Product from './components/Product';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/parentcomponent" element={<ParentComponent/>} />
         <Route path="/componentabcd" element={<Components_ABCD/>} />
+        <Route path="/contextAPI" element={<ContextAPI/>} />
         <Route path="/categories" element={<Categories/>}>
           {/* <Route index element={<Kids/>}/> */}
           <Route path='kids' element={<Kids/>}/>
