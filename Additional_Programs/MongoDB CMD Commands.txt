@@ -1,4 +1,6 @@
-show db / show databases	// for showing list of databases
+(set bin path first)
+mongo				// to start mongoDB shell (mongo is a command line shell)
+show dbs / show databases	// for showing list of databases
 use dbname			// for using or creating new database
 
 db.createCollection("product")	// for creating collection/tables
@@ -8,12 +10,12 @@ db.product.insertOne({name:'madan', designation:'student'})	// insert one docume
 db.product.insertMany([{name:'safdar', designation:'student'},{name:'ali', designation:'student'}])	// insert multiple documents in collection
 
 db.product.find()		// for find all
-db.product.find().pretty	// find all and display in order
+db.product.find().pretty()	// find all and display in order
 
 const data = db.product.find()	// store data in data variable
 data.next()			// display one by one
 
-db.product.findOne()
+db.product.findOne()			//return first document
 db.product.findOne({name:'madan'})	// find one particular document
 db.product.findOne({name:'madan',designation:'student'})	// find one particular document
 
@@ -27,3 +29,34 @@ db.product.update({name:'Madan'},{$set : {name:'madan'}})	// update data (same a
 
 db.product.drop()	// delete collection
 db.drop()		// delete database
+
+/////////////////////////////////////////////////////////////////
+
+db.product.find({},{name:1,_id:0}).pretty()
+db.product.find({},{'spec.ram':1}).pretty()
+db.product.find({},{spec:{ram:1}}).pretty()
+db.product.find({price:599},{'spec.ram':1}).pretty()
+db.product.find({price: {$gt: 700}},{price:1,name:1,_id:0}).pretty()
+db.product.find({'spec.ram':{$gt:20}}).pretty()
+db.product.find({'spec.ram':64}).pretty()
+db.product.find({releaseDate: {$eq: ISODate('2022-09-14')}}).pretty()
+db.product.find({price:{$in:[30,599,699]}}).pretty()
+db.product.find({color: {$in : [/^w/,/^o/]}}).pretty()
+db.product.find({color: {$nin : [/^w/,/^o/]}}).pretty()
+db.product.find({$and : [{price:599},{'spec.ram':4}]}).pretty()
+db.product.find({$and : [{price:599},{color:{$in : ['black','white']}}]}).pretty()
+db.product.find({spec:{$exists:true}}).pretty()
+db.product.find({$and : [{price:{$exists:1},{price:{$gte:599}}}]}).pretty()
+db.product.find({$or : [{price:599},{'spec.ram':{$eq:4}}]}).pretty()
+db.product.find({price:{$not : {$lt:699}}}).pretty()
+
+
+
+
+
+
+
+
+
+
+

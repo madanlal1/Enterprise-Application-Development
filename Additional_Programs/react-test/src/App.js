@@ -1,11 +1,10 @@
-// import MenuAppBar from "./components/Navbar";
+import React from 'react';
+import './App.css';
+import Child from './components/Child';
 
 function App() {
   return (
-   <>
-     {/* <MenuAppBar /> */}
-     <h1>hellow world</h1>
-   </>
+  <Child/>
   );
 }
 
