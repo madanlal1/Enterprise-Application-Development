@@ -1,0 +1,16 @@
+// A database is a structured way to store and access data.
+// NoSQL : you store the data in an organized way but not in rows and columns.
+// NoSQL DocumentDataBase : data in mongoDB stored in documents.
+// In simple MongoDB is a "NoSQL Document Database"
+// Document : A way to organize and store data as a set of "field-value" pairs.
+// Collection : An organized store of documents in MongoDB, usually with common fields between documents.
+// Instance : a single machine locally or in the cloud, running a certain software.
+// Clusters : a group of servers that stores your data.
+// Replica Set : a few connected MongoDB instances that stores the same data.
+// Single Cluster in Atlas : automatically configured as a replica set.
+// Atlas:
+	// Manage cluster creation.
+	// Run and maintain database deployment.
+	// Use cloud service provider of your choice.
+	// Experiment with new tools and features.
+// mongod --version
