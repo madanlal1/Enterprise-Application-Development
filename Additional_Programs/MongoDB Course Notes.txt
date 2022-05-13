@@ -14,3 +14,13 @@
 	// Use cloud service provider of your choice.
 	// Experiment with new tools and features.
 // mongod --version
+// JSON : JavaScript Standard Object Notation
+// BSON : MongoDB stores data in BSON, internally and over the Network.
+// MongoDB store data in BSON and viewed in JSON
+// mongoimport : mongostore
+// mongoexport : mongodump
+// URI : Uniform Resource Identifier
+// srv - establishes a secure connection.
+// Cursor : A pointer to a result set of a query.
+// it : iterates through the cursor results.
+//
