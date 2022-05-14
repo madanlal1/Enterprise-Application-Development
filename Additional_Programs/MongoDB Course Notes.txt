@@ -23,4 +23,44 @@
 // srv - establishes a secure connection.
 // Cursor : A pointer to a result set of a query.
 // it : iterates through the cursor results.
-//
+// _id : unique identifier for a document in a collection.
+// Insert Many document : db.collection.insert([ {}, {} ]) //all insertions into array.
+// Set : sets new values if same field will not update.
+// Push : push or update value if not available and update value if available.
+// db.collection.drop()
+// {<field> : { $<operator> : <value>}}
+// Query operators provide additional ways to locate data within the database.
+// Comparision operators specifically allows us to find data within a certain range.
+// $eq : is used as the default operator when an operator is not specified.
+// $and : Match all of the specified query clauses.
+// $or : At least one of the query clauses is matched.
+	// { <operator> : [ {statement1}, {statement2}, ...]}
+// $nor : Fail to match both given clauses.
+// $not : Negates the query requirement.
+	// { $not : {statement} } 
+// $expr : allows the use of aggregation expressions within the query language.
+// $expr " allows us to use variables and conditional statements.
+// Projection : if you use "1" then you will got the fields that you defined & _id field. 
+		if you use "0" then you will got the all fields except the defined ones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
