@@ -42,8 +42,11 @@
 // $expr " allows us to use variables and conditional statements.
 // Projection : if you use "1" then you will got the fields that you defined & _id field. 
 		if you use "0" then you will got the all fields except the defined ones.
+// Cursor Methods:
+			// sort() // limit() // pretty() // count()
 
-
+// order of indexing : // 1 asc // -1 desc
+// MongoDB Compass : MongoDB's Graphical User Interface Product.
 
 
 
