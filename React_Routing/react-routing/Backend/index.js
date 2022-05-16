@@ -60,14 +60,26 @@
 //     console.log('server is listening at port 3000')
 // })
 
+// ------------------------------------------------------->>
 
 // OS Module
 
-const os = require('os');
+// const os = require('os');
 
-console.log("OS Platform: ",os.platform());
-console.log("OS CPU Architecture: ",os.arch());
-console.log("Number of Logical CPUs Cores: ",os.cpus());
-console.log("Host Name: ",os.hostname());
-console.log("Home Directory: ",os.homedir());
-console.log("Current Version: ",os.version());
+// console.log("OS Platform: ",os.platform());
+// console.log("OS CPU Architecture: ",os.arch());
+// console.log("Number of Logical CPUs Cores: ",os.cpus());
+// console.log("Host Name: ",os.hostname());
+// console.log("Home Directory: ",os.homedir());
+// console.log("Current Version: ",os.version());
+
+// -------------------------------------------------------->>
+
+// establishing mongoDB connection
+
+const mongoose = require("mongoose");
+
+mongoose.connect('mongodb://localhost:27017/Madan', {useNewUrlParser : true, useUnifiedTopology: true}).then( () => {
+    console.log('connection build successfully...');
+}).catch(err => console.log(err) );
+
