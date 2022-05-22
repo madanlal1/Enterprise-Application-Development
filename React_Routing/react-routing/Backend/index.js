@@ -1,32 +1,32 @@
 // HTTP Server 
 
-// const http = require('http');
-// const fs = require('fs');
+const http = require('http');
+const fs = require('fs');
 
-// const server = http.createServer(function(req,res) {
+const server = http.createServer(function(req,res) {
 
-//     if(req.url == '/home') {
+    if(req.url == '/home') {
         
-//         const homepage = fs.readFileSync('./components/Home.html')
-//         // res.write("Hello! from something");
-//         res.end(homepage);
-//     }
-//     else if(req.url == '/about') {
+        const homepage = fs.readFileSync('./components/Home.html')
+        // res.write("Hello! from something");
+        res.end(homepage);
+    }
+    else if(req.url == '/about') {
 
-//         const aboutpage = fs.readFileSync('./components/About.html')
-//         // res.write("Hello! from ABC");
-//         res.end(aboutpage);
-//     }
-//     else {
+        const aboutpage = fs.readFileSync('./components/About.html')
+        // res.write("Hello! from ABC");
+        res.end(aboutpage);
+    }
+    else {
         
-//         res.write("Hello! from Node");
-//         res.end();
-//     }
-// })
+        res.write("Hello! from Node");
+        res.end();
+    }
+})
 
-// server.listen(3000, function() {
-//     console.log('server is listening at port 3000');
-// })
+server.listen(3000, function() {
+    console.log('server is listening at port 3000');
+})
 
 // ---------------------------------------------------------<<
 
@@ -77,9 +77,9 @@
 
 // establishing mongoDB connection
 
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/Madan', {useNewUrlParser : true, useUnifiedTopology: true}).then( () => {
-    console.log('connection build successfully...');
-}).catch(err => console.log(err) );
+// mongoose.connect('mongodb://localhost:27017/Madan', {useNewUrlParser : true, useUnifiedTopology: true}).then( () => {
+//     console.log('connection build successfully...');
+// }).catch(err => console.log(err) );
 

@@ -22,5 +22,5 @@ server.get('/blog', (req,res)=> {
 })
 
 server.listen(3000, () => {
-    console.log("Express Server is running...");
+    console.log("Express Server is running on server 3000");
 })
