@@ -1,3 +1,5 @@
+import sum from '../sum';
+
 test('It adds 2 numbers together', () => {
     expect(1+3).toBe(4);
 })
@@ -23,6 +25,9 @@ test('Check it is not_a_number', () => {
     expect(a).toBeNaN(); 
 })
 
+test('check result from sum function', () => {
+    expect(sum(1,3)).toBe(4); 
+})
 
 
 
