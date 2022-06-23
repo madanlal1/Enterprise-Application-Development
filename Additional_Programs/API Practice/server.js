@@ -54,7 +54,7 @@ app.get('/add/:word/:score?', (req,res) => {
 
     }
     
-    res.send(reply);
+    res.send(reply);    
 
 })
 

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --runInBand --force-exit --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^28.1.1"
+    "express": "^4.18.1",
+    "jest": "^28.1.1",
+    "supertest": "^6.2.3"
   }
 }
