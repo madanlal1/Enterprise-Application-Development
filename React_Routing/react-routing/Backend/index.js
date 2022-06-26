@@ -1,32 +1,32 @@
 // HTTP Server 
 
-const http = require('http');
-const fs = require('fs');
+// const http = require('http');
+// const fs = require('fs');
 
-const server = http.createServer(function(req,res) {
+// const server = http.createServer(function(req,res) {
 
-    if(req.url == '/home') {
+//     if(req.url == '/home') {
         
-        const homepage = fs.readFileSync('./components/Home.html')
-        // res.write("Hello! from something");
-        res.end(homepage);
-    }
-    else if(req.url == '/about') {
+//         const homepage = fs.readFileSync('./components/Home.html')
+//         // res.write("Hello! from something");
+//         res.end(homepage);
+//     }
+//     else if(req.url == '/about') {
 
-        const aboutpage = fs.readFileSync('./components/About.html')
-        // res.write("Hello! from ABC");
-        res.end(aboutpage);
-    }
-    else {
+//         const aboutpage = fs.readFileSync('./components/About.html')
+//         // res.write("Hello! from ABC");
+//         res.end(aboutpage);
+//     }
+//     else {
         
-        res.write("Hello! from Node");
-        res.end();
-    }
-})
+//         res.write("Hello! from Node");
+//         res.end();
+//     }
+// })
 
-server.listen(3000, function() {
-    console.log('server is listening at port 3000');
-})
+// server.listen(3000, function() {
+//     console.log('server is listening at port 3000');
+// })
 
 // ---------------------------------------------------------<<
 
@@ -38,20 +38,20 @@ server.listen(3000, function() {
 
 // const app = express();
 
-// app.use('/',express.static('public/'));
+// app.use(express.static('public'));
 
-// app.get('/', function(req,res) {
+// app.get('/', (req,res) => {
 
 //     res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
 //     // res.status(200).json({result:'success'})
 // })
 
-// app.get('/about', function(req,res) {
+// app.get('/about', (req,res) => {
 
 //     res.sendFile(path.resolve(__dirname, './public/components/About.html'));
 // })
 
-// app.get('*', function(req,res) {
+// app.get('*', (req,res) => {
 
 //     res.status(404).json({msg:'Page Not Found!'})
 // })
@@ -83,3 +83,34 @@ server.listen(3000, function() {
 //     console.log('connection build successfully...');
 // }).catch(err => console.log(err) );
 
+// ----------------------------------------------------------<<
+
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+
+app.use(bodyParser.json())
+app.use(express.static('public'))
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.get('/', (req,res) => {
+    res.sendFile(path.resolve(__dirname, './public/components/Register.html'))
+})
+
+app.post('/insertData', (req,res) => {
+
+    const {username,password} = req.body
+
+    console.log(req.body)
+    // res.status(200).json({msg:"Thankyou for signin"}) 
+    res.send(req.body)
+})
+
+app.listen(3000, () => {
+    console.log('server is listening on port 3000')
+})
