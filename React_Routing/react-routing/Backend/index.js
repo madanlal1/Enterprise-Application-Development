@@ -93,7 +93,7 @@ const mongoose = require('mongoose');
 const app = express();
 mongoose.connect('mongodb+srv://admin:admin@cluster0.2oxj55a.mongodb.net/registration?retryWrites=true&w=majority').then(() => console.log('database connected successfully')).catch(err => console.log(err))
 
-const User = new mongoose.Schema({
+const Schema = mongoose.Schema({
     username : {
         type: String,
         required : true
@@ -104,6 +104,7 @@ const User = new mongoose.Schema({
     }
 })
 
+const User = mongoose.model('user',Schema);
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -115,23 +116,41 @@ app.get('/', (req,res) => {
     res.sendFile(path.resolve(__dirname, './public/components/Register.html'))
 })
 
-app.post('/insertData', (req,res) => {
+app.post('/insertData', async (req,res) => {
     
-    const {username,password} = req.body
+    const {username,password} = req.body;
 
     if(!username || !password) {
         res.status(400).json({error: "Username or password missing!!!"})
     }
     else {
 
-        const user = new User({username, password})
-        console.log('hle tho iho')
-        user.save().then(() => {
-            res.status(200).json({msg:"data inserted successfully"})
-        }).catch(err => console.log(err+"ISSUE HERE"))
+        // Data Insertion...
+        // const user = new User({username:username, password:password})
+        // user.save().then(() => {
+        //     res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
+        // }).catch(err => console.log(err+"ISSUE HERE"))
+        
+        // retrieve data
+        const login = await User.find({username,password});
+
+        if(login) {
+            
+            // res.redirect('/insertData')
+            res.status(200).json({msg:"You are logon successfully"})
+            
+        }
+        else {
+            // res.redirect('/')
+            res.status(400).json({err:"Invalid credintials"})
+        }
+        
 
     }
 
+    // app.get('/insertData', (req,res) => {
+    //     res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
+    // })
 
 
     console.log(req.body)
