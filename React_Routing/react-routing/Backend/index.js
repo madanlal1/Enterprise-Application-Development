@@ -116,6 +116,12 @@ app.get('/', (req,res) => {
     res.sendFile(path.resolve(__dirname, './public/components/Register.html'))
 })
 
+app.get('/home', (req,res) => {
+    res.sendFile(path.resolve(__dirname, './public/components/Home.html'))
+})
+
+
+
 app.post('/insertData', async (req,res) => {
     
     const {username,password} = req.body;
@@ -132,17 +138,19 @@ app.post('/insertData', async (req,res) => {
         // }).catch(err => console.log(err+"ISSUE HERE"))
         
         // retrieve data
-        const login = await User.find({username,password});
-
-        if(login) {
+        const login1 = await User.findOne({username});
+        const login2 = await User.findOne({password});
+        
+        if(login1 && login2) {
             
-            // res.redirect('/insertData')
-            res.status(200).json({msg:"You are logon successfully"})
+            res.redirect('/home')
+            // res.status(200).json({msg:"You are logon successfully"})
             
         }
         else {
-            // res.redirect('/')
-            res.status(400).json({err:"Invalid credintials"})
+            res.redirect('/')
+            
+            // res.status(400).json({err:"Invalid credintials"})
         }
         
 
@@ -153,7 +161,7 @@ app.post('/insertData', async (req,res) => {
     // })
 
 
-    console.log(req.body)
+    // console.log(req.body)
     // res.sendFile(path.resolve(__dirname,'./public/components/Home.html'))
     // res.send("Hello "+req.body.username)
     // res.status(200).json({msg:"Thankyou for signin"}) 
