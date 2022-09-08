@@ -71,3 +71,9 @@ git commit -m 'Added my project'
 git remote add origin git@github.com:sammy/my-new-project.git
 
 git push -u -f origin master
+
+
+// --------------------------------------------------------------------------
+
+git log           // will display commits (Press Enter for more) (for end wq)
+git checkout -b new_branch 6e559cb
