@@ -74,6 +74,10 @@ git push -u -f origin master
 
 
 // --------------------------------------------------------------------------
+  
+Revert Changes in newBranch
+  
 
 git log           // will display commits (Press Enter for more) (for end wq)
+  
 git checkout -b new_branch 6e559cb
