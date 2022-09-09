@@ -32,7 +32,7 @@ Wq 				                      //exit from log file (optional)
 // --------------------------------------------------------------------------
   
 Git reset –hard <commit id>	    //revert  changes
-  
+
 // --------------------------------------------------------------------------
   
 Git branch <branchName>	        //create new branch
@@ -81,3 +81,10 @@ Revert Changes in newBranch
 git log           // will display commits (Press Enter for more) (for end wq)
   
 git checkout -b new_branch 6e559cb
+
+// --------------------------------------------------------------------------
+
+pipeline operator in js    ( |> )
+
+npm i @babel/core @babel/cli @babel/plugin-proposal-pipeline-operator
+  
